@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoveControl - Cadeira de Rodas por Expressões Faciais</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Move<span>Control</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato" class="btn-contato">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+ 
+    <section id="inicio" class="hero">
+        <div class="hero-content"> 
+            <h1>Revolucionando a Mobilidade</h1>
+            <h2>Cadeira de Rodas Controlada por Expressões Faciais</h2>
+            <p>Tecnologia inovadora que proporciona independência e autonomia para pessoas com mobilidade reduzida.</p>
+            <div class="hero-buttons">
+                <a href="#como-funciona" class="btn btn-primary">Como Funciona</a>
+                <a href="#contato" class="btn btn-secondary">Entre em Contato</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGKcnF3MChJgCydyuTFRpVhugsfRTTrHTiHPNB1UrgKw&s=10" alt="Cadeira de rodas inteligente controlada por expressões faciais">
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre o Projeto</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>O projeto <strong>MoveControl</strong> nasceu da necessidade de proporcionar maior independência para pessoas com mobilidade reduzida nos membros superiores e inferiores.</p>
+                    <p>Utilizando tecnologia de reconhecimento facial e inteligência artificial, desenvolvemos um sistema inovador que permite controlar uma cadeira de rodas motorizada apenas com expressões faciais.</p>
+                    <p>Nossa missão é transformar a vida de pessoas com deficiências motoras severas, oferecendo uma solução acessível e eficiente para a mobilidade autônoma.</p>
+                </div>
+                <div class="sobre-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-text">Precisão no reconhecimento facial</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-text">Expressões faciais para controle</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3s</span>
+                        <span class="stat-text">Tempo de resposta</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="como-funciona">
+        <div class="container">
+            <h2 class="section-title">Como Funciona</h2>
+            <div class="funcionamento">
+                <div class="funcionamento-item">
+                    <div class="icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Captura de Imagem</h3>
+                    <p>Uma câmera de alta definição captura continuamente o rosto do usuário, enviando as imagens para processamento em tempo real.</p>
+                </div>
+                <div class="funcionamento-item">
+                    <div class="icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Processamento IA</h3>
+                    <p>Algoritmos de inteligência artificial analisam as expressões faciais e as convertem em comandos específicos para a cadeira.</p>
+                </div>
+                <div class="funcionamento-item">
+                    <div class="icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Controle da Cadeira</h3>
+                    <p>Os comandos são transmitidos ao sistema de controle da cadeira, que aciona os motores para realizar os movimentos desejados.</p>
+                </div>
+                <div class="funcionamento-item">
+                    <div class="icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Expressões Faciais</h3>
+                    <p>Diferentes expressões controlam diferentes movimentos: sorrir (avançar), franzir a testa (parar), piscar olho direito (virar à direita), etc.</p>
+                </div>
+            </div>
+            
+            <div class="demo-container">
+                <h3>Demonstração Interativa</h3>
+                <div class="demo-content">
+                    <div class="webcam-placeholder" id="webcam-container">
+                        <div class="webcam-overlay">
+                            <p>Clique para ativar a demonstração</p>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <div class="control-item active" data-expression="sorrir">
+                            <i class="fas fa-smile"></i>
+                            <span>Sorrir = Avançar</span>
+                        </div>
+                        <div class="control-item" data-expression="franzir">
+                            <i class="fas fa-angry"></i>
+                            <span>Franzir = Parar</span>
+                        </div>
+                        <div class="control-item" data-expression="piscar-direito">
+                            <i class="fas fa-eye"></i>
+                            <span>Piscar Direito = Virar à Direita</span>
+                        </div>
+                        <div class="control-item" data-expression="piscar-esquerdo">
+                            <i class="fas fa-eye"></i>
+                            <span>Piscar Esquerdo = Virar à Esquerda</span>
+                        </div>
+                        <div class="control-item" data-expression="boca-aberta">
+                            <i class="fas fa-surprise"></i>
+                            <span>Boca Aberta = Recuar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="beneficios">
+        <div class="container">
+            <h2 class="section-title">Benefícios</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Autonomia</h3>
+                    <p>Proporciona independência para pessoas com limitações motoras severas, permitindo que se movimentem sem assistência.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <h3>Acessibilidade</h3>
+                    <p>Torna a mobilidade acessível para pessoas que não conseguem utilizar controles manuais convencionais.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Segurança</h3>
+                    <p>Sistema com múltiplos sensores que previnem colisões e garantem a segurança do usuário em diferentes ambientes.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Resposta Rápida</h3>
+                    <p>Tempo de resposta inferior a 3 segundos, garantindo controle preciso e eficiente da cadeira de rodas.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Personalização</h3>
+                    <p>Sistema adaptável às necessidades específicas de cada usuário, com calibração personalizada das expressões faciais.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>Longa Duração</h3>
+                    <p>Bateria de alta capacidade que proporciona autonomia de até 8 horas de uso contínuo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipe" class="equipe">
+        <div class="container">
+            <h2 class="section-title">Nossa Equipe</h2>
+            <div class="equipe-grid">
+                <div class="membro-card">
+                    <div class="membro-img">
+                        <img src="https://placeholder.svg?height=150&width=150" alt="Foto do membro da equipe">
+                    </div>
+                    <h3>Brenno Lucas</h3>
+                    <p class="cargo">Engenheiro de Software</p>
+                    <p class="bio">Programador responsável pela criação e administração da analise de expressões faciais.</p>.</p>
+                </div>
+                <div class="membro-card">
+                    <div class="membro-img">
+                        <img src="https://placeholder.svg?height=150&width=150" alt="Foto do membro da equipe">
+                    </div>
+                    <h3>João Victor</h3>
+                    <p class="cargo">Engenheiro de Software</p>
+                    <p class="bio">Especialista em visão computacional e algoritmos de reconhecimento facial.</p>
+                </div>
+                <div class="membro-card">
+                    <div class="membro-img">
+                        <img src="https://placeholder.svg?height=150&width=150" alt="Foto do membro da equipe">
+                    </div>
+                    <h3>FIlipe Picinin</h3>
+                    <p class="cargo">Engenheira Mecatrônica</p>
+                    <p class="bio">Responsável pelo desenvolvimento do sistema mecânico e eletrônico da cadeira.</p>
+                </div>
+                <div class="membro-card">
+                    <div class="membro-img">
+                        <img src="https://placeholder.svg?height=150&width=150" alt="Foto do membro da equipe">
+                    </div>
+                    <h3>Yohan Rosental</h3>
+                    <p class="cargo">Fisioterapeuta</p>
+                    <p class="bio">Especialista em reabilitação neurológica e adaptação de tecnologias assistivas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contato-container">
+                <div class="contato-info">
+                    <h3>Informações de Contato</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Av. Tecnologia, 1000 - São Paulo, SP</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(11) 3456-7890</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>contato@movecontrol.com.br</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contato-form">
+                    <h3>Envie uma Mensagem</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" id="assunto" name="assunto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Move<span>Control</span></h2>
+                    <p>Transformando vidas através da tecnologia assistiva.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#beneficios">Benefícios</a></li>
+                        <li><a href="#equipe">Equipe</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Receba Novidades</h3>
+                    <p>Inscreva-se para receber atualizações sobre o projeto.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Seu email" required>
+                        <button type="submit" class="btn btn-primary">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MoveControl. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
